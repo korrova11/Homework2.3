@@ -1,10 +1,9 @@
-public class Bicycle implements ServiceStation {
+public class Bicycle extends TransportVehicle {
     private String modelName;
     private int wheelsCount;
 
     public Bicycle(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
+        super(modelName, wheelsCount);
     }
 
     public String getModelName() {
@@ -23,18 +22,7 @@ public class Bicycle implements ServiceStation {
         this.wheelsCount = wheelsCount;
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-    @Override
-    public void check() {
-        if (modelName != null) {
-            System.out.println("************************");
-            System.out.println("Обслуживаем " + modelName);
-            for (int i = 0; i < wheelsCount; i++) {
-              updateTyre();
 
-            }
-        }
-    }
+
+
 }

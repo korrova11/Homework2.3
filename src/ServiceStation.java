@@ -1,4 +1,4 @@
 public interface ServiceStation {
 
-    public void check();
+     void check();
 }
